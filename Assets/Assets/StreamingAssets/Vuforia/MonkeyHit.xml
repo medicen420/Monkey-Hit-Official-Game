@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="Silla_sticker" size="20.000000 25.882353" />
+    <ImageTarget name="Salvavidas_sticker" size="20.000000 25.882353" />
+    <ImageTarget name="Helado_sticker" size="20.000000 25.882353" />
+    <ImageTarget name="Barril_sticker" size="20.000000 25.882353" />
+    <ImageTarget name="SillaQR" size="20.000000 25.882353" />
+    <ImageTarget name="SalvavidasQR" size="20.000000 25.882353" />
+    <ImageTarget name="HeladoQR" size="20.000000 25.882353" />
+    <ImageTarget name="BarrilQR" size="20.000000 25.882353" />
+  </Tracking>
+</QCARConfig>
