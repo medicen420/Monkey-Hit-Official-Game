@@ -7,6 +7,8 @@ public class Coco : MonoBehaviour
     public GameObject coquirri;
     public Animator anim;
     public Monkey_coco_die2 mOk;
+    public int punto = 1;
+    public BoxCollider bx;
 
     void Start()
     {
@@ -26,6 +28,8 @@ public class Coco : MonoBehaviour
 
             //para manejar físicas mandamos llamar a rigidbody
             coquirri.AddComponent<Rigidbody>();
+            Score.score += punto;
+            Destroy(bx);
     
         }
 

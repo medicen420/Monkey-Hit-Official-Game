@@ -7,7 +7,9 @@ public class Monkey_Icecream : MonoBehaviour
     
     public Animator anim;
     public Animator ani;
-    
+    public float puntos;
+    public BoxCollider bx;
+
 
 
     // Start is called before the first frame update
@@ -15,6 +17,7 @@ public class Monkey_Icecream : MonoBehaviour
     {
         
        GetComponent<Animator>();
+
         
 
     }
@@ -34,8 +37,9 @@ public class Monkey_Icecream : MonoBehaviour
             
             anim.SetBool("se cae", true);
             ani.SetBool("Helado se cae", true);
-           
-            
+            Score.score += puntos;
+            Destroy(bx);
+
             //anim.Play("Helado_cae");
 
         }

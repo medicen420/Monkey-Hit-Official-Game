@@ -2,7 +2,7 @@
 
 public class Barril : MonoBehaviour
 {
-    public static int puntos = 1;
+    
     float currentime = 0;
     float maxTime = 1.5f;
     public Animator anim;
@@ -10,8 +10,10 @@ public class Barril : MonoBehaviour
     public GameObject idle;
     public GameObject fall;
     public GameObject bx;
-    bool monedita;
-
+   
+    public float puntos;
+   
+    
     //public Animator anima;
     bool fresa;
 
@@ -22,11 +24,6 @@ public class Barril : MonoBehaviour
         //anima = GetComponent<Animator>();
         anim = GetComponent<Animator>();
         anima = GetComponent<Animator>();
-        monedita = false;
-
-     
-
-
         //piso.SetActive(true);
 
     }
@@ -36,18 +33,25 @@ public class Barril : MonoBehaviour
     //Cuando mi proyectil o la banana impacte con el barril... 
     public void OnTriggerEnter(Collider other)
     {
+        
 
         if (other.gameObject.name == "banana(Clone)")
         {
             //Debug.Log("hola banana");
-            anim.SetBool("caida", true);
+            //este codigo activa la animacion del barril rodando por el piso
+            anim.SetBool("caida", true);  
             //variable booleana que nos ayudará a controlar el current time dentro de Update
-
             fresa = true;
             
 
+            
+           
+
+
+
 
         }
+        
     }
 
 
@@ -56,9 +60,11 @@ public class Barril : MonoBehaviour
         if (fresa == true)
         {
 
+            
             Debug.Log("fresa esta activada");
             currentime += Time.deltaTime;
 
+            //si el current time es mayor a max time que equivale a 1.5f...
             if (currentime >= maxTime)
             {
                 //Destroy(piso);
@@ -68,20 +74,22 @@ public class Barril : MonoBehaviour
                 fall.SetActive(true);
                 bx.SetActive(false);
                 anima.SetBool("fall", true);
+                
+
+
 
                 //variable que nos ayudará a activar el puntaje
-                monedita = true;
+
 
                 Debug.Log("ya esta");
+                
             }
 
+            
         }
 
 
     }
-
-
- 
 
 
 

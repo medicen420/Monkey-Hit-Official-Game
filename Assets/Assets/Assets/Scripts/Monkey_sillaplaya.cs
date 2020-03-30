@@ -6,6 +6,8 @@ public class Monkey_sillaplaya : MonoBehaviour
 {
     public GameObject monkey_silla_idle;
     public GameObject monkey_silla_dead;
+    public int punto = 1;
+    public BoxCollider bx;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +29,8 @@ public class Monkey_sillaplaya : MonoBehaviour
             Debug.Log("la silla me aplasto");
             monkey_silla_idle.SetActive(false);
             monkey_silla_dead.SetActive(true);
+            Score.score += punto;
+            Destroy(bx);
         }
     }
 
